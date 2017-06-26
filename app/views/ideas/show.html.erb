@@ -1,0 +1,31 @@
+<style media="screen">
+table, th, td {
+   border: 1px solid black;
+}
+
+body {
+    background-color: lightblue;
+
+}
+
+</style>
+
+
+
+    <h3><strong>People Who Liked This Post:</strong></h3>
+
+
+    <table>
+			<thead>
+				<th>Alias</th>
+				<th>Name</th>
+			</thead>
+			<tbody>
+				<% @users.each do |u| %>
+					<tr>
+					<td><a href="/users/<%= u.id %>"> <%= u.alias %></a></td>
+					<td><%= u.name %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
